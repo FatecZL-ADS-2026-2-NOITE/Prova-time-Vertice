@@ -76,6 +76,97 @@ body {
     background-color: #285d3b;
 }
 
+
+.footer {
+    background-color: #bddbc6;
+    color: #254b35;
+    padding: 40px 6% 0;
+    margin-top: 50px;
+}
+
+.container-footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding-bottom: 30px;
+}
+
+.footer-info {
+    max-width: 350px;
+}
+
+.footer-info h3 {
+    font-size: 25px;
+    margin: 0 0 12px;
+    color: #254b35;
+}
+
+.footer-info p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #254b35;
+    margin: 0;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-links h4 {
+    font-size: 16px;
+    margin: 0 0 5px;
+    color: #254b35;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #254b35;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #254b35;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    border-top: 1px solid rgba(51, 97, 61, 0.2);
+    padding: 18px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.footer-bottom p {
+    font-size: 12px;
+    color: #254b35;
+    margin: 0;
+}
+
+/* FOOTER EM TELAS MENORES */
+@media (max-width: 600px) {
+    .footer {
+        padding: 30px 5% 0;
+    }
+
+    .container-footer {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
 .container-busca {
     display: flex;
     justify-content: center;
