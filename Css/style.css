@@ -149,7 +149,6 @@ body {
     margin: 0;
 }
 
-/* FOOTER EM TELAS MENORES */
 @media (max-width: 600px) {
     .footer {
         padding: 30px 5% 0;
@@ -165,7 +164,130 @@ body {
         text-align: center;
     }
 }
+#sobre {
+    padding: 70px 6%;
+    background-color: #f7faf8;
+}
 
+.container-sobre {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.titulo-sobre span {
+    display: inline-block;
+    color: #34764c;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.titulo-sobre h2 {
+    color: #254b35;
+    font-size: 36px;
+    line-height: 1.2;
+    margin: 0 0 18px;
+}
+
+.titulo-sobre > p {
+    color: #627168;
+    font-size: 17px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.conteudo-sobre {
+    background-color: white;
+    padding: 30px;
+    border-radius: 14px;
+    border-left: 5px solid #8dbb9a;
+    box-shadow: 0 5px 20px rgba(30, 70, 45, 0.07);
+}
+
+.conteudo-sobre > p {
+    color: #526057;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-top: 0;
+}
+
+.conteudo-sobre h3 {
+    color: #254b35;
+    font-size: 19px;
+    margin: 25px 0 15px;
+}
+
+.conteudo-sobre ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.conteudo-sobre li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 14px;
+    color: #526057;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.conteudo-sobre li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #34764c;
+    font-weight: bold;
+}
+
+
+@media (max-width: 700px) {
+    .nav {
+        padding: 12px 5%;
+    }
+
+    .nav nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .logo img {
+        width: 190px;
+    }
+
+    .links-nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .links-nav a {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    #sobre {
+        padding: 45px 5%;
+    }
+
+    .container-sobre {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .titulo-sobre h2 {
+        font-size: 29px;
+    }
+
+    .conteudo-sobre {
+        padding: 22px;
+    }
+}
 
 .container-busca {
     display: flex;
