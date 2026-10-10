@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidades de Saúde</title>
+    <link rel="stylesheet" href="/Css/style.css">
+    
+</head>
+<body>
+    <div class="nav">
+        <nav>
+            <p>Busque por Unidades de Saúde</p>
+        </nav>
+    </div>
+
+    <section id="busca">
+        <div class="container-busca">
+            <h3>Procure por nome ou cidade da unidade de saúde</h3>
+
+            <!-- função .js para busca -->
+            <input type="text">
+        </div>
+    </section>
+
+    <section id="unidades">
+        <div class="container-unidades">
+            <div class="cards">
+
+                <div class="card">
+                    <div class="imagem-card">
+                        <img src="/img/" alt="">
+                    </div>
+
+                    <div class="title-card">
+                        <!-- nome em dados.js -->
+                        <p>{unidade.nome}</p>
+                    </div>
+
+                    <div class="descricao-card">
+                        <!-- endereço e horario de funcionamento em dados.js -->
+                        <p>{unidade.endereco}</p>
+                        <p>{unidade.horario}</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="footer">
+            <p>Desenvolvido pelo time Vértice</p>
+        </div>
+    </section>
+
+    <script src="/Js/dados.js"></script>
+    <script src="/Js/script.js"></script>
+</body>
+</html>

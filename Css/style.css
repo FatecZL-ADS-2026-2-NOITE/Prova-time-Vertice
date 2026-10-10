@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+.nav {
+    background-color: green; 
+}
+
+.container-busca {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-unidades {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.footer{
+    background-color: green;
+}
