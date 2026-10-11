@@ -32,6 +32,7 @@ const modalMapa = document.getElementById('modal-mapa');
 const modalFechar = document.getElementById('modal-fechar');
 const listaCards = document.getElementById('cards');
 const modalStatus = document.getElementById('modal-status');
+const modalTelefone = document.getElementById('modal-telefone');
 
 listaCards.addEventListener('click', (evento) => {
     const card = evento.target.closest('.card');
@@ -42,12 +43,14 @@ listaCards.addEventListener('click', (evento) => {
     const linhas = card.querySelectorAll('.linha-cards span');
     const endereco = linhas[0].textContent;
     const horario = linhas[1].textContent;
+    const telefone = linhas[2].textContent;
 
     modalImagem.src = imagem.src;
     modalImagem.alt = imagem.alt;
     modalNome.textContent = nome;
     modalEndereco.textContent = endereco;
     modalHorario.textContent = horario;
+    modalTelefone.textContent = telefone;
 
     const selo = card.querySelector('.selo');
     modalStatus.textContent = selo.textContent;

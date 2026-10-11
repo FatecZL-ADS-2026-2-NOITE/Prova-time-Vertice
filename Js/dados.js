@@ -97,5 +97,14 @@ const unidades = [
         dias: [1, 2, 3, 4, 5, 6],
         abre: 7,
         fecha: 19
+    },
+    {
+        id : 12,
+        nome: 'UBS/CER II JARDIM CAMPOS',
+        endereco: 'R. Crescente, 97 - Jardim Bartira, São Paulo - SP, 08152-090',
+        horario: 'Segunda a sexta, das 07h às 19h',
+        dias: [1, 2, 3, 4, 5],
+        abre: 7,
+        fecha: 19
     }
 ]
