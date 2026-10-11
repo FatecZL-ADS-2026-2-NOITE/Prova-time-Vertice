@@ -1,7 +1,15 @@
 const inputBusca = document.getElementById('busca-input');
 const cards = document.querySelectorAll('#cards .card');
 const semResultados = document.getElementById('sem-resultados');
+const contador = document.getElementById('contador');
 
+function atualizarContador() {
+    const visiveis = document.querySelectorAll('#cards .card:not([hidden]):not(.card-oculto)').length;
+
+    contador.textContent = visiveis === 1
+        ? '1 unidade encontrada'
+        : visiveis + ' unidades encontradas';
+}
 function filtrarCards() {
     const termo = inputBusca.value.trim().toLowerCase();
     let visiveis = 0;
@@ -12,10 +20,16 @@ function filtrarCards() {
         if (corresponde) visiveis++;
     });
 
-    if (semResultados) {
+       if (semResultados) {
         semResultados.hidden = visiveis > 0;
     }
+
+    atualizarContador();
 }
+
+    atualizarContador();
+
+
 
 if (inputBusca) {
     inputBusca.addEventListener('input', filtrarCards);
@@ -145,6 +159,7 @@ function aplicarPrioridade(ativa) {
         containerCards.appendChild(card);
         card.classList.toggle('card-oculto', ativa && card.dataset.status === 'fechado');
     });
+        atualizarContador();
 }
 
 botaoPrioridade.addEventListener('click', () => {

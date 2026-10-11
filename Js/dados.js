@@ -6,7 +6,8 @@ const unidades = [
         horario: 'Segunda a sábado, das 07h às 19h',
         dias: [1, 2, 3, 4, 5, 6],
         abre: 7,
-        fecha: 19
+        fecha: 19,
+        telefone: '(11) 5237-3189'
     },
     {
         id: 2,
@@ -15,7 +16,8 @@ const unidades = [
         horario: 'Segunda a sexta, das 07h às 19h',
         dias: [1, 2, 3, 4, 5],
         abre: 7,
-        fecha: 19
+        fecha: 19,
+        telefone: '(11) 4780-5036'
     },
     {
         id: 3,
@@ -24,7 +26,8 @@ const unidades = [
         horario: 'Segunda a sexta, das 07h às 20h',
         dias: [1, 2, 3, 4, 5],
         abre: 7,
-        fecha: 20
+        fecha: 20,
+        telefone: '(11) 2286-0015'
     },
     {
         id: 4,
@@ -33,7 +36,8 @@ const unidades = [
         horario: 'Segunda a sexta, das 07h às 19h',
         dias: [1, 2, 3, 4, 5],
         abre: 7,
-        fecha: 19
+        fecha: 19,
+        telefone: '(11) 2749-4235'
     },
     {
         id: 5,
@@ -42,7 +46,8 @@ const unidades = [
         horario: 'Todos os dias, 24 horas',
         dias: [0, 1, 2, 3, 4, 5, 6],
         abre: 0,
-        fecha: 24
+        fecha: 24,
+        telefone: '(11) 5178-2724'
     },
     {
         id: 6,
@@ -51,7 +56,8 @@ const unidades = [
         horario: 'Segunda a sexta, das 07h às 19h',
         dias: [1, 2, 3, 4, 5],
         abre: 7,
-        fecha: 19
+        fecha: 19,
+        telefone: '(11) 5237-1665'
     },
     {
         id: 7,
@@ -60,7 +66,8 @@ const unidades = [
         horario: 'Segunda a sexta, das 07h às 19h',
         dias: [1, 2, 3, 4, 5],
         abre: 7,
-        fecha: 19
+        fecha: 19,
+        telefone: '(11) 5237-1800'
     },
     {
         id: 8,
@@ -69,7 +76,8 @@ const unidades = [
         horario: 'Segunda a sábado, das 07h às 19h',
         dias: [1, 2, 3, 4, 5, 6],
         abre: 7,
-        fecha: 19
+        fecha: 19,
+        telefone: '(11) 5178-1469'
     },
     {
         id: 9,
@@ -78,7 +86,8 @@ const unidades = [
         horario: 'Segunda a sexta, das 07h às 19h',
         dias: [1, 2, 3, 4, 5],
         abre: 7,
-        fecha: 19
+        fecha: 19,
+        telefone: '(11) 5178-0659'
     },
     {
         id: 10,
@@ -87,7 +96,8 @@ const unidades = [
         horario: 'Segunda a sexta, das 07h às 19h',
         dias: [1, 2, 3, 4, 5],
         abre: 7,
-        fecha: 19
+        fecha: 19,
+        telefone: '(11) 5238-1007'
     },
     {
         id: 11,
@@ -96,15 +106,17 @@ const unidades = [
         horario: 'Segunda a sábado, das 07h às 19h',
         dias: [1, 2, 3, 4, 5, 6],
         abre: 7,
-        fecha: 19
+        fecha: 19,
+        telefone: '(11) 5239-0685'
     },
     {
-        id : 12,
+        id: 12,
         nome: 'UBS/CER II JARDIM CAMPOS',
         endereco: 'R. Crescente, 97 - Jardim Bartira, São Paulo - SP, 08152-090',
         horario: 'Segunda a sexta, das 07h às 19h',
         dias: [1, 2, 3, 4, 5],
         abre: 7,
-        fecha: 19
+        fecha: 19,
+        telefone: '(11) 5178-1488'
     }
 ]

@@ -297,6 +297,48 @@ body {
     flex-direction: column;
 }
 
+/* Barra de pesquisa */
+#busca {
+    padding: 48px 6% 0;
+}
+
+.container-busca h3 {
+    margin: 0 0 16px;
+    font-size: 22px;
+    text-align: center;
+    color: #254b35;
+}
+
+#busca-input {
+    width: min(560px, 100%);
+    padding: 14px 18px 14px 50px;
+    border: 1px solid #bddbc6;
+    border-radius: 10px;
+    background-color: #ffffff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%2334764c' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.3-4.3'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: 18px center;
+    background-size: 20px;
+    font-size: 16px;
+    color: #26352c;
+    box-shadow: 0 1px 3px rgba(38, 53, 44, 0.06);
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+#busca-input::placeholder {
+    color: #7a8a80;
+}
+
+#busca-input:hover {
+    border-color: #8dbb9a;
+}
+
+#busca-input:focus {
+    outline: none;
+    border-color: #34764c;
+    box-shadow: 0 0 0 4px rgba(52, 118, 76, 0.18);
+}
+
 /* SECTION CARDS */
 #unidades {
     padding: 56px 6%;
@@ -322,6 +364,14 @@ body {
     margin: 0;
     font-size: 15px;
     color: #46584e;
+}
+
+.contador {
+    margin: 0 0 24px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+    color: #254b35;
 }
 
 .cards {
