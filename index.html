@@ -1,55 +1,57 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unidades de Saúde</title>
     <link rel="stylesheet" href="Css/style.css">
-    
+
 </head>
+
 <body>
 
-<div class="nav">
-    <nav>
-        <a href="#inicio" class="logo">
-            <img src="img/logo.png" alt="Logo Guia Saúde">
-        </a>
+    <div class="nav">
+        <nav>
+            <a href="#inicio" class="logo">
+                <img src="img/logo.png" alt="Logo Guia Saúde">
+            </a>
 
-        <div class="links-nav">
-            <a href="#sobre">Sobre</a>
-            <a href="#busca" class="link-busca">Buscar Unidades</a>
-        </div>
-    </nav>
-</div>
+            <div class="links-nav">
+                <a href="#sobre">Sobre</a>
+                <a href="#busca" class="link-busca">Buscar Unidades</a>
+            </div>
+        </nav>
+    </div>
 
     <section id="sobre">
-            <div class="container-sobre">
-        <div class="titulo-sobre">
-            <h2>Sobre o Guia Saúde</h2>
-            <p>
-                Encontre informações sobre as unidades de saúde
-                do município de forma simples e rápida.
-            </p>
+        <div class="container-sobre">
+            <div class="titulo-sobre">
+                <h2>Sobre o Guia Saúde</h2>
+                <p>
+                    Encontre informações sobre as unidades de saúde
+                    do município de forma simples e rápida.
+                </p>
+            </div>
+
+            <div class="conteudo-sobre">
+                <p>
+                    O <strong>Guia Saúde</strong> é uma iniciativa
+                    criada para facilitar
+                    o acesso da população às informações sobre as
+                    unidades de atendimento do município.
+                </p>
+
+                <h3>O que você encontra aqui?</h3>
+
+                <ul>
+                    <li>Busca rápida por nome ou bairro;</li>
+                    <li>Endereços e telefones das unidades;</li>
+                    <li>Filtros para UBS, UPAs e hospitais;</li>
+                    <li>Informações sobre horários de funcionamento.</li>
+                </ul>
+            </div>
         </div>
-
-        <div class="conteudo-sobre">
-            <p>
-                O <strong>Guia Saúde</strong> é uma iniciativa
-                criada para facilitar
-                o acesso da população às informações sobre as
-                unidades de atendimento do município.
-            </p>
-
-            <h3>O que você encontra aqui?</h3>
-
-            <ul>
-                <li>Busca rápida por nome ou bairro;</li>
-                <li>Endereços e telefones das unidades;</li>
-                <li>Filtros para UBS, UPAs e hospitais;</li>
-                <li>Informações sobre horários de funcionamento.</li>
-            </ul>
-        </div>
-    </div>
     </section>
 
     <section id="busca">
@@ -57,7 +59,13 @@
             <h3>Procure por nome ou cidade da unidade de saúde</h3>
 
             <!-- função .js para busca -->
-            <input type="text" id="busca-input" placeholder="Ex.: Itaquera ou Jardim Aurora" aria-label="Buscar unidades de saúde por nome ou cidade">
+            <input type="text" id="busca-input" placeholder="Ex.: Itaquera ou Jardim Aurora"
+                aria-label="Buscar unidades de saúde por nome ou cidade">
+
+            <!-- Botão de Status das unidades -->
+            <button type="button" class="btn-prioridade" id="btn-prioridade" aria-pressed="false">
+                Preciso de atendimento agora
+            </button>
         </div>
     </section>
 
@@ -70,7 +78,7 @@
 
             <div class="cards" id="cards">
 
-                <article class="card">
+                <article class="card" data-id="1">
                     <div class="imagem-card">
                         <img src="img/ubs/ubs.jpg" alt="Foto da unidade AMA/UBS Águia de Haia">
                     </div>
@@ -80,12 +88,23 @@
                     </div>
 
                     <div class="descricao-card">
-                        <p class="linha-cards"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Rua Tantas Palavras, 12 - Conjunto Habitacional Águia de Haia, São Paulo - SP, 08223-510</span></p>
-                        <p class="linha-cards"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Segunda a sábado, das 07h às 19h</span></p>
+                        <p class="linha-cards"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg><span>Rua Tantas Palavras, 12 - Conjunto Habitacional Águia de Haia, São Paulo - SP,
+                                08223-510</span></p>
+                        <p class="linha-cards"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg><span>Segunda a sábado, das 07h às 19h</span></p>
                     </div>
                 </article>
 
-                <article class="card">
+                <article class="card" data-id="2">
                     <div class="imagem-card">
                         <img src="img/ubs/ubs2.jpg" alt="Foto da unidade UBS Jardim São Carlos">
                     </div>
@@ -95,12 +114,23 @@
                     </div>
 
                     <div class="descricao-card">
-                        <p class="linha-cards"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Rua Macabu, 35 - Jardim São Carlos, Guaianases, São Paulo - SP, 08411-470</span></p>
-                        <p class="linha-cards"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Segunda a sexta, das 07h às 19h</span></p>
+                        <p class="linha-cards"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg><span>Rua Macabu, 35 - Jardim São Carlos, Guaianases, São Paulo - SP, 08411-470</span>
+                        </p>
+                        <p class="linha-cards"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg><span>Segunda a sexta, das 07h às 19h</span></p>
                     </div>
                 </article>
 
-                <article class="card">
+                <article class="card" data-id="3">
                     <div class="imagem-card">
                         <img src="img/ubs/ubs3.jpg" alt="Foto da unidade UBS Itaquera">
                     </div>
@@ -110,12 +140,23 @@
                     </div>
 
                     <div class="descricao-card">
-                        <p class="linha-cards"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Rua Américo Salvador Novelli, 265 - Itaquera, São Paulo - SP, 08210-090</span></p>
-                        <p class="linha-cards"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Segunda a sexta, das 07h às 20h</span></p>
+                        <p class="linha-cards"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg><span>Rua Américo Salvador Novelli, 265 - Itaquera, São Paulo - SP, 08210-090</span>
+                        </p>
+                        <p class="linha-cards"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg><span>Segunda a sexta, das 07h às 20h</span></p>
                     </div>
                 </article>
 
-                <article class="card">
+                <article class="card" data-id="4">
                     <div class="imagem-card">
                         <img src="img/ubs/ubs4.jpg" alt="Foto da unidade UBS Parque Arthur Alvim">
                     </div>
@@ -125,12 +166,22 @@
                     </div>
 
                     <div class="descricao-card">
-                        <p class="linha-cards"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Rua Henrique Jacob, 269 - Arthur Alvim, São Paulo - SP, 03566-010</span></p>
-                        <p class="linha-cards"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Segunda a sexta, das 07h às 19h</span></p>
+                        <p class="linha-cards"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg><span>Rua Henrique Jacob, 269 - Arthur Alvim, São Paulo - SP, 03566-010</span></p>
+                        <p class="linha-cards"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg><span>Segunda a sexta, das 07h às 19h</span></p>
                     </div>
                 </article>
 
-                <article class="card">
+                <article class="card" data-id="5">
                     <div class="imagem-card">
                         <img src="img/ubs/ubs5.jpg" alt="Foto da unidade UPA 26 de Agosto">
                     </div>
@@ -140,12 +191,23 @@
                     </div>
 
                     <div class="descricao-card">
-                        <p class="linha-cards"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Avenida Miguel Ignácio Curi, 41 - Vila Carmosina, São Paulo - SP, 08295-005</span></p>
-                        <p class="linha-cards"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Todos os dias, 24 horas</span></p>
+                        <p class="linha-cards"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg><span>Avenida Miguel Ignácio Curi, 41 - Vila Carmosina, São Paulo - SP,
+                                08295-005</span></p>
+                        <p class="linha-cards"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg><span>Todos os dias, 24 horas</span></p>
                     </div>
                 </article>
 
-                <article class="card">
+                <article class="card" data-id="6">
                     <div class="imagem-card">
                         <img src="img/ubs/ubs6.jpg" alt="Foto da unidade UBS Guaianases II">
                     </div>
@@ -155,12 +217,23 @@
                     </div>
 
                     <div class="descricao-card">
-                        <p class="linha-cards"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Rua Comandante Carlos Ruhl, 189 - Guaianases, São Paulo - SP, 08410-120</span></p>
-                        <p class="linha-cards"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Segunda a sexta, das 07h às 19h</span></p>
+                        <p class="linha-cards"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg><span>Rua Comandante Carlos Ruhl, 189 - Guaianases, São Paulo - SP, 08410-120</span>
+                        </p>
+                        <p class="linha-cards"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg><span>Segunda a sexta, das 07h às 19h</span></p>
                     </div>
                 </article>
 
-                <article class="card">
+                <article class="card" data-id="7">
                     <div class="imagem-card">
                         <img src="img/ubs/ubs7.jpg" alt="Foto da unidade UBS Jardim Aurora">
                     </div>
@@ -170,12 +243,23 @@
                     </div>
 
                     <div class="descricao-card">
-                        <p class="linha-cards"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Avenida Cláudio da Costa, 54 - Jardim Aurora, São Paulo - SP, 08431-160</span></p>
-                        <p class="linha-cards"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Segunda a sexta, das 07h às 19h</span></p>
+                        <p class="linha-cards"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg><span>Avenida Cláudio da Costa, 54 - Jardim Aurora, São Paulo - SP, 08431-160</span>
+                        </p>
+                        <p class="linha-cards"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg><span>Segunda a sexta, das 07h às 19h</span></p>
                     </div>
                 </article>
 
-                <article class="card">
+                <article class="card" data-id="8">
                     <div class="imagem-card">
                         <img src="img/ubs/ubs8.jpg" alt="Foto da unidade UBS/AMA Jardim Brasília">
                     </div>
@@ -185,12 +269,23 @@
                     </div>
 
                     <div class="descricao-card">
-                        <p class="linha-cards"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Avenida Osvaldo Valle Cordeiro, 245 - Cidade Líder, São Paulo - SP, 03584-000</span></p>
-                        <p class="linha-cards"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Segunda a sábado, das 07h às 19h</span></p>
+                        <p class="linha-cards"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg><span>Avenida Osvaldo Valle Cordeiro, 245 - Cidade Líder, São Paulo - SP,
+                                03584-000</span></p>
+                        <p class="linha-cards"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg><span>Segunda a sábado, das 07h às 19h</span></p>
                     </div>
                 </article>
 
-                <article class="card">
+                <article class="card" data-id="9">
                     <div class="imagem-card">
                         <img src="img/ubs/ubs9.jpg" alt="Foto da unidade UBS Vila Carmosina">
                     </div>
@@ -200,12 +295,22 @@
                     </div>
 
                     <div class="descricao-card">
-                        <p class="linha-cards"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Rua Ipopoca, 61 - Vila Carmosina, São Paulo - SP, 08290-330</span></p>
-                        <p class="linha-cards"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Segunda a sexta, das 07h às 19h</span></p>
+                        <p class="linha-cards"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg><span>Rua Ipopoca, 61 - Vila Carmosina, São Paulo - SP, 08290-330</span></p>
+                        <p class="linha-cards"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg><span>Segunda a sexta, das 07h às 19h</span></p>
                     </div>
                 </article>
 
-                <article class="card">
+                <article class="card" data-id="10">
                     <div class="imagem-card">
                         <img src="img/ubs/ubs10.jpg" alt="Foto da unidade UBS Padre José de Anchieta">
                     </div>
@@ -215,12 +320,22 @@
                     </div>
 
                     <div class="descricao-card">
-                        <p class="linha-cards"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Avenida Sylvio Torres, 313 - Arthur Alvim, São Paulo - SP, 03589-010</span></p>
-                        <p class="linha-cards"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Segunda a sexta, das 07h às 19h</span></p>
+                        <p class="linha-cards"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg><span>Avenida Sylvio Torres, 313 - Arthur Alvim, São Paulo - SP, 03589-010</span></p>
+                        <p class="linha-cards"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg><span>Segunda a sexta, das 07h às 19h</span></p>
                     </div>
                 </article>
 
-                <article class="card">
+                <article class="card" data-id="11">
                     <div class="imagem-card">
                         <img src="img/ubs/ubs11.jpg" alt="Foto da unidade AMA/UBS Integrada Padre Manoel da Nóbrega">
                     </div>
@@ -230,11 +345,21 @@
                     </div>
 
                     <div class="descricao-card">
-                        <p class="linha-cards"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Avenida Padre Francisco de Toledo, 545 - Arthur Alvim, São Paulo - SP, 03590-120</span></p>
-                        <p class="linha-cards"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Segunda a sábado, das 07h às 19h</span></p>
+                        <p class="linha-cards"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg><span>Avenida Padre Francisco de Toledo, 545 - Arthur Alvim, São Paulo - SP,
+                                03590-120</span></p>
+                        <p class="linha-cards"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg><span>Segunda a sábado, das 07h às 19h</span></p>
                     </div>
                 </article>
-
             </div>
 
             <p class="sem-resultados" id="sem-resultados" role="status" hidden>
@@ -244,35 +369,55 @@
     </section>
 
     <section>
-            <footer class="footer">
-        <div class="container-footer">
+        <footer class="footer">
+            <div class="container-footer">
 
-            <div class="footer-info">
-                <h3>Guia Saúde</h3>
-                <p>
-                    Facilitando o acesso às informações
-                    sobre as unidades de saúde do município.
-                </p>
+                <div class="footer-info">
+                    <h3>Guia Saúde</h3>
+                    <p>
+                        Facilitando o acesso às informações
+                        sobre as unidades de saúde do município.
+                    </p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Navegação</h4>
+                    <a href="#sobre">Sobre o projeto</a>
+                    <a href="#busca">Buscar unidades</a>
+                    <a href="#unidades">Unidades de saúde</a>
+                </div>
+
             </div>
 
-            <div class="footer-links">
-                <h4>Navegação</h4>
-                <a href="#sobre">Sobre o projeto</a>
-                <a href="#busca">Buscar unidades</a>
-                <a href="#unidades">Unidades de saúde</a>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Guia Saúde. Todos os direitos reservados.</p>
+                <p>Desenvolvido pelo time Vértice</p>
+                <p>Fotos ilustrativas das unidades: Wikimedia Commons (licenças CC BY / CC BY-SA / domínio público) —
+                    Governo do Estado de São Paulo, Enio1966, HVL, Academia de letras de CM, Nádia Aguiar e ASCOM
+                    Prefeitura de Votuporanga.</p>
             </div>
-
-        </div>
-
-        <div class="footer-bottom">
-            <p>&copy; 2026 Guia Saúde. Todos os direitos reservados.</p>
-            <p>Desenvolvido pelo time Vértice</p>
-            <p>Fotos ilustrativas das unidades: Wikimedia Commons (licenças CC BY / CC BY-SA / domínio público) — Governo do Estado de São Paulo, Enio1966, HVL, Academia de letras de CM, Nádia Aguiar e ASCOM Prefeitura de Votuporanga.</p>
-        </div>
-    </footer>
+        </footer>
     </section>
+
+    <dialog class="modal" id="modal-unidade" aria-labelledby="modal-nome">
+        <button type="button" class="modal-fechar" id="modal-fechar" aria-label="Fechar">&times;</button>
+
+        <div class="modal-imagem">
+            <img id="modal-imagem" src="" alt="">
+        </div>
+
+        <div class="modal-conteudo">
+            <span id="modal-status" class="selo-modal"></span>
+            <h2 id="modal-nome"></h2>
+            <p class="modal-linha"><strong>Endereço:</strong> <span id="modal-endereco"></span></p>
+            <p class="modal-linha"><strong>Horário:</strong> <span id="modal-horario"></span></p>
+            <a id="modal-mapa" class="modal-mapa" href="#" target="_blank" rel="noopener noreferrer">Abrir no Google
+                Maps</a>
+        </div>
+    </dialog>
 
     <script src="Js/dados.js"></script>
     <script src="Js/script.js"></script>
 </body>
+
 </html>

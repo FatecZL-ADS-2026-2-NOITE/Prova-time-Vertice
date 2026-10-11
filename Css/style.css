@@ -1,4 +1,3 @@
-
 * {
     box-sizing: border-box;
 }
@@ -14,6 +13,7 @@ body {
     color: #26352c;
     background-color: #f7faf8;
 }
+
 .nav {
     background-color: #bddbc6;
     width: 100%;
@@ -164,6 +164,7 @@ body {
         text-align: center;
     }
 }
+
 #sobre {
     padding: 70px 6%;
     background-color: #f7faf8;
@@ -194,7 +195,7 @@ body {
     margin: 0 0 18px;
 }
 
-.titulo-sobre > p {
+.titulo-sobre>p {
     color: #627168;
     font-size: 17px;
     line-height: 1.7;
@@ -209,7 +210,7 @@ body {
     box-shadow: 0 5px 20px rgba(30, 70, 45, 0.07);
 }
 
-.conteudo-sobre > p {
+.conteudo-sobre>p {
     color: #526057;
     font-size: 15px;
     line-height: 1.8;
@@ -331,6 +332,7 @@ body {
 
 .card {
     display: flex;
+    cursor: pointer;
     flex-direction: column;
     background-color: #ffffff;
     border: 1px solid #dbeae1;
@@ -343,6 +345,7 @@ body {
 .imagem-card {
     height: 180px;
     background: linear-gradient(135deg, #bddbc6 0%, #e9f4ee 100%);
+    position: relative;
 }
 
 .imagem-card img {
@@ -428,5 +431,190 @@ body {
 @media (prefers-reduced-motion: reduce) {
     .card {
         transition: none;
+    }
+}
+
+/* Modal Cards */
+.modal {
+    border: none;
+    padding: 0;
+    border-radius: 16px;
+    width: min(560px, 92vw);
+    max-height: 90vh;
+    overflow: auto;
+    color: #26352c;
+    background-color: #ffffff;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.modal::backdrop {
+    background-color: rgba(20, 40, 28, 0.6);
+}
+
+.modal[open] {
+    animation: modal-zoom 0.3s ease;
+}
+
+.modal[open]::backdrop {
+    animation: modal-fade 0.3s ease;
+}
+
+@keyframes modal-zoom {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes modal-fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.modal-fechar {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    background-color: #ffffff;
+    color: #254b35;
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s;
+}
+
+.modal-fechar:hover {
+    background-color: #e9f4ee;
+}
+
+.modal-imagem {
+    height: 220px;
+    background: linear-gradient(135deg, #bddbc6 0%, #e9f4ee 100%);
+}
+
+.modal-imagem img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal-conteudo {
+    padding: 24px;
+}
+
+.modal-conteudo h2 {
+    margin: 0 0 16px;
+    font-size: 22px;
+    color: #254b35;
+}
+
+.modal-linha {
+    margin: 0 0 10px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #46584e;
+}
+
+.modal-linha strong {
+    color: #254b35;
+}
+
+/* Google Maps */
+.modal-mapa {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 18px;
+    border-radius: 8px;
+    background-color: #34764c;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.modal-mapa:hover {
+    background-color: #285d3b;
+}
+
+/* Selos de disponibilidade */
+.selo,
+.selo-modal {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.selo {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.selo-aberto {
+    background-color: #247a4a;
+}
+
+.selo-fecha-em-breve {
+    background-color: #f2b53a;
+    color: #3a2600;
+}
+
+.selo-fechado {
+    background-color: #b3382c;
+}
+
+/* Filtro de Prioridade */
+.btn-prioridade {
+    margin-top: 16px;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 10px;
+    background-color: #247a4a;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-prioridade:hover {
+    background-color: #285d3b;
+}
+
+.btn-prioridade[aria-pressed="true"] {
+    background-color: #254b35;
+}
+
+.card.card-oculto {
+    display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .modal[open],
+    .modal[open]::backdrop {
+        animation: none;
     }
 }
