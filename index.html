@@ -75,8 +75,18 @@
                 <h2>Unidades de saúde</h2>
                 <p>Encontre o endereço e o horário de funcionamento das unidades próximas a você.</p>
             </div>
-            
-            <p class="contador" id="contador" role="status" aria-live="polite"></p>
+
+            <div class="barra-ordenacao">
+                <p class="contador" id="contador" role="status" aria-live="polite"></p>
+                <button type="button" class="btn-alfabetico" id="btn-alfabetico" aria-pressed="false" aria-label="Ordenar unidades A→Z">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M3 6h18M7 12h10M11 18h2"/>
+                    </svg>
+                    <span class="icone-ordenar">A→Z</span>
+                </button>
+            </div>
 
             <div class="cards" id="cards">
 

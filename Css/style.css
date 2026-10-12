@@ -662,9 +662,85 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-
     .modal[open],
     .modal[open]::backdrop {
         animation: none;
+    }
+}
+
+
+/* ── Barra: contador (esq) + ordenação (dir) ─────────────────────────── */
+.barra-ordenacao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding-bottom: 14px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #dbeae1;
+}
+
+.barra-ordenacao .contador {
+    margin: 0;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 600;
+    color: #46584e;
+}
+
+/* ── Botão ordenar alfabeticamente ───────────────────────────────────── */
+.btn-alfabetico {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px 6px 10px;
+    border: 1.5px solid #c6dece;
+    border-radius: 999px;
+    background-color: #ffffff;
+    color: #34764c;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1;
+    cursor: pointer;
+    white-space: nowrap;
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.btn-alfabetico svg {
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.btn-alfabetico:hover {
+    background-color: #e9f4ee;
+    border-color: #34764c;
+    box-shadow: 0 2px 8px rgba(52, 118, 76, 0.12);
+}
+
+.btn-alfabetico:focus-visible {
+    outline: 3px solid rgba(52, 118, 76, 0.4);
+    outline-offset: 2px;
+}
+
+.btn-alfabetico[aria-pressed="true"] {
+    background-color: #34764c;
+    border-color: #34764c;
+    color: #ffffff;
+    box-shadow: 0 2px 8px rgba(52, 118, 76, 0.25);
+}
+
+.btn-alfabetico[aria-pressed="true"] svg {
+    transform: rotate(180deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-alfabetico,
+    .btn-alfabetico svg {
+        transition: none;
     }
 }

@@ -172,3 +172,41 @@ botaoPrioridade.addEventListener('click', () => {
 
     aplicarPrioridade(ativa);
 });
+
+// ── Ordenar alfabeticamente (toggle: padrão → A→Z → Z→A → padrão) ──────
+const btnAlfabetico = document.getElementById('btn-alfabetico');
+const iconeOrdenar  = btnAlfabetico.querySelector('.icone-ordenar');
+
+const estados = [
+    { ordem: null,  label: 'A→Z', ariaLabel: 'Ordenar unidades de A a Z',    pressed: false },
+    { ordem: 'az',  label: 'A→Z', ariaLabel: 'Ordenar unidades de Z a A',    pressed: true  },
+    { ordem: 'za',  label: 'Z→A', ariaLabel: 'Remover ordenação alfabética', pressed: true  },
+];
+let estadoIdx = 0;
+
+function nomePorCard(card) {
+    return card.querySelector('.title-card p').textContent.trim();
+}
+
+btnAlfabetico.addEventListener('click', () => {
+    estadoIdx = (estadoIdx + 1) % estados.length;
+    const { ordem, label, ariaLabel, pressed } = estados[estadoIdx];
+
+    const cardsArr = Array.from(containerCards.querySelectorAll('.card'));
+
+    if (ordem === null) {
+        cardsArr.sort((a, b) => Number(a.dataset.id) - Number(b.dataset.id));
+    } else if (ordem === 'az') {
+        cardsArr.sort((a, b) => nomePorCard(a).localeCompare(nomePorCard(b), 'pt-BR'));
+    } else {
+        cardsArr.sort((a, b) => nomePorCard(b).localeCompare(nomePorCard(a), 'pt-BR'));
+    }
+
+    cardsArr.forEach(card => containerCards.appendChild(card));
+
+    iconeOrdenar.textContent = label;
+    btnAlfabetico.setAttribute('aria-pressed', String(pressed));
+    btnAlfabetico.setAttribute('aria-label', ariaLabel);
+
+    atualizarContador();
+});
