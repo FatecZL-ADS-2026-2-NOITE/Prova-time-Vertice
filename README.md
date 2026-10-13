@@ -44,26 +44,35 @@ A interface foi pensada para ser simples, acessível e fácil de utilizar em dis
 ## Funcionalidades
 
 - Busca por nome da unidade ou bairro
-- Filtro por tipo de unidade
+- Filtro por tipo de unidade (UBS, AMA, UPA e CER)
 - Ordenação por nome
 - Visualização do status da unidade em tempo real
+- Botão "Aberto agora", que mostra só as unidades abertas no horário atual
 - Modal com mais detalhes da unidade selecionada
-- Destaque das unidades que precisam de atendimento imediato
+- Contador de unidades encontradas e mensagem quando nada é encontrado
 - Layout responsivo
+
+## Documentação
+
+Os documentos do projeto ficam na pasta `docs`:
+
+- `docs/requisitos.pdf`: documento de requisitos (Anexo A), feito a partir da entrevista com a Secretaria Municipal de Saúde
+- `docs/entidades.pdf`: lista de entidades e atributos (Anexo B), rascunho do MER
 
 ## Estrutura do projeto
 
 ```text
 .
-├── Css/
-│   └── style.css
-├── Js/
-│   ├── dados.js
-│   └── script.js
+├── docs/
+│   ├── requisitos.pdf
+│   └── entidades.pdf
 ├── img/
 │   ├── logo.png
 │   └── ubs/
 ├── index.html
+├── style.css
+├── dados.js
+├── script.js
 ├── LICENSE
 └── README.md
 ```
