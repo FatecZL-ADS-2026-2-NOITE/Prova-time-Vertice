@@ -1,3 +1,25 @@
+const templateCard = document.getElementById('template-card');
+const destinoCards = document.getElementById('cards');
+
+unidades.forEach((unidade) => {
+    const card = templateCard.content.firstElementChild.cloneNode(true);
+
+    card.dataset.id = unidade.id;
+
+    const imagem = card.querySelector('.imagem-card img');
+    imagem.src = unidade.imagem;
+    imagem.alt = 'Foto da unidade ' + unidade.nome;
+
+    card.querySelector('.title-card p').textContent = unidade.nome;
+
+    const valores = card.querySelectorAll('.descricao-card > .linha-cards > span');
+    valores[0].textContent = unidade.endereco;
+    valores[1].textContent = unidade.horario;
+    valores[2].textContent = unidade.telefone;
+
+    destinoCards.appendChild(card);
+});
+
 const inputBusca = document.getElementById('busca-input');
 const cards = document.querySelectorAll('#cards .card');
 const semResultados = document.getElementById('sem-resultados');
